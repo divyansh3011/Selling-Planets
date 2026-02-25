@@ -147,7 +147,7 @@ border: 2px solid white;
         <li> <a href="#"> Sell Now </a></li>
         <li> <a href="#"> About Us </a></li>
         <li> <a href="#" class="signup"> Sign Up </a></li>
-        <li> <a href="#" class="light" onclick="toggleLightMode()"> Light Mode </a></li>
+        <li> <a href="#" class="light" onclick="toggleLightMode()" id="mode"> Light Mode </a></li>
     </ul>
 </nav>
 </header>
@@ -168,6 +168,12 @@ border: 2px solid white;
     <script>
         function toggleLightMode() {
             document.body.classList.toggle('light');
+            let modeButton = document.getElementById('mode');
+            if (document.body.classList.contains("light")) {
+                modeButton.textContent = "Dark Mode";
+            } else {
+                modeButton.textContent = "Light Mode";
+            }
         }
     </script>
     
